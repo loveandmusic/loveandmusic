@@ -90,7 +90,8 @@
         <form action="http://list.qq.com/cgi-bin/qf_compose_send" target="_blank" method="post">
             <input type="hidden" name="t" value="qf_booked_feedback">
             <input type="hidden" name="id" value="7f0656415f8646965b5b89ec42023c0f7006dde507d38722">
-            <input id="to" name="to" type="text" class="rsstxt" value="" placeholder="留下邮箱，成为最先听到的人">
+            <label id="emailPlaceholder" class="placeholder" for="to">留下邮箱，成为最先听到的人</label>
+            <input id="to" name="to" type="text" class="rsstxt" value="">
             <input type="submit" value="订阅" class="btn">
             <span class="gap">|</span>
             <a href="http://weibo.com/u/3202769364">微博@爱和音乐</a>
@@ -110,6 +111,40 @@
 
   ga('create', 'UA-41229738-2', 'loveandguitar.com');
   ga('send', 'pageview');
+  
+  function placeholder(objid,objid2){
+    var fos = document.getElementById(objid);
+    if(fos.value!=''){
+        $("#"+objid2).hide();
+    }
+    fos.onfocus = function(){
+        $("#"+objid2).addClass("focus");
+    }
+    fos.onblur = function(){
+        $("#"+objid2).removeClass("focus");
+    }
+    var element = document.getElementById(objid);
+    if("\v"=="v"){
+        element.onpropertychange = webChange;
+    }else{
+        element.addEventListener("input",webChange,false);
+    }
+    function webChange(){
+        if(element.value){
+            $("#"+objid2).hide();
+        }else if(element.value==""){
+            $("#"+objid2).show();
+        }
+    }
+}
+
+if($('#inputEmail')[0]){
+    placeholder("to","emailPlaceholder");
+}
+if($('#inputPwd')[0]){
+    placeholder("inputPwd","pwdPlaceholder");
+}
+
 </script>
 
 </body>
