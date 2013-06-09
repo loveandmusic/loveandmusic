@@ -5,7 +5,7 @@
 	<title>爱和音乐 | 《走遍氚星》发布</title>	
 	<link rel='stylesheet' href='./fonts/exo/stylesheet.css' />
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	<script src='./js/unslider.min.js'></script>
+	<script type="text/javascript" src='./js/unslider.min.js'></script>
   <style>
 		*{
 			margin: 0;
@@ -63,8 +63,7 @@
 			top: -50%\9;
 			text-align: center;
 			font-size: 44px;
-			height:100%;
-			width: 100%;
+			width:800px;
 
 			}
 
@@ -75,8 +74,6 @@
 		}
 		/* screen#1 */
 		div#cover{
-			height:100%;
-			width:100%;
 			text-align: center;
 			vertical-align: middle;
 		}
@@ -218,26 +215,15 @@
 
 		}
 		/* sliding */
-		ol.dots{
-			display:none;
-		}
-		.screen{
-			width:100%;
-			height:100%;
-		}
 		#slide_controller{
 			z-index: 100;
 			position: fixed;
-			display: inline;
-			float: right;
 		}
 		div.sc-player{
 			height:100%;
 	//		margin-top: 100%;
 		}
 		div#lyric{
-			height:100%;
-			width: 100%;
 			//margin-top:200%;
 			font-family:"Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei"; 
 		}
@@ -264,10 +250,8 @@
 </head>
 <body>
 <wrapper>
-	<script src='./js/unslider.min.js'></script>
-	<script>$(function() {
-    $('.middle').unslider();
-});</script>
+<div class="outer">
+	<div class="middle">
 		<div id="slide_controller">
 				<a href="#" class="unslider-arrow prev">Previous slide</a>
 				<a href="#" class="unslider-arrow next">Next slide</a>
@@ -282,12 +266,9 @@
     });
 </script>
 		</div>
-<div class="outer">
-	<div class="middle">
-	
 	<ul>
 	<li>
-		<div id="cover" class="screen">
+		<div id="cover">
 			<h1 id="song_title_eng">Family Album Tritium-Star</h1>
 			<h1 id="song_title_chn">走遍氚星</h1>
 			<a class="unslider-arrow next" href="#"><img id="down_arrow" src="./images/down.png" /></a>
@@ -295,10 +276,10 @@
 				$(function() {
     				$('.middle').unslider({	
     				speed: 1000,               //  The speed to animate each slide (in milliseconds)
-					delay: 100000,              //  The delay between slide animations (in milliseconds)
+					delay: 1000,              //  The delay between slide animations (in milliseconds)
 					complete: function() {},  //  A function that gets called after every slide animation
 					keys: true,               //  Enable keyboard (left, right) arrow shortcuts
-					dots: false,               //  Display dot navigation
+					dots: true,               //  Display dot navigation
 					fluid: false              //  Support responsive design. May break non-responsive designs);
 				});    				
 });
@@ -306,14 +287,14 @@
 		</div>	
 	</li>
 		<li>
-		<div class="inner" class="screen">
+		<div class="inner">
 			<a href="https://soundcloud.com/lvnms/family-album-tritium-star" class="sc-player">走遍氚星</a>
 	<script type="text/javascript" src="./js/soundcloud.player.api.js"></script>
 	<script type="text/javascript" src="./js/sc-player.js"></script>
 		</div>
 	</li>
 	<li>
-		<div id="lyric" class="screen">
+		<div id="lyric">
 			<p>完全的自主</p>
 				<p>我拥有完全的自由</p>
 				<p>我的思想和灵魂</p>
@@ -352,31 +333,5 @@
     		<span style="display:block;float:left;width:60px;padding-top:3px;">© 2013 </span><img id="lvn" src="images/loveandmusic18px.png" /><span style="display:block;float:left;width:12px;padding-top:3px;"> - </span><img id="chance" src="images/givechance18px.png" />
     	</span>
     	</div>
-    	<script type="text/javascript">
-var slidey = $('.banner').unslider(),
-    data = slidey.data('unslider');
-    
-//  Start Unslider
-data.start();
-
-//  Pause Unslider
-data.stop();
-
-//  Move to a slide index, with optional callback
-data.move(2, function() {});
-//  data.move(0);
-
-//  Manually enable keyboard shortcuts
-data.keys();
-
-//  Move to the next slide (or the first slide if there isn't one)
-data.next();
-
-//  Move to the previous slide (or the last slide if there isn't one)
-data.prev();
-
-//  Append the navigation dots manually
-data.dots();
-    	</script>
 </wrapper>
 </body>
