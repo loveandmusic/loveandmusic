@@ -4,129 +4,56 @@
   <meta charset="UTF-8">
 	<title>爱和音乐 | 《走遍氚星》发布</title>	
 	<link rel='stylesheet' href='./fonts/exo/stylesheet.css' />
+	<link rel='stylesheet' href='./stylesheets/superslides.css' />
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	<script type="text/javascript" src='./js/unslider.min.js'></script>
-  <style>
-		*{
-			margin: 0;
-			padding: 0;
-		}
-		html, body, .outer, input{
-			height: 100%;
-			width: 100%;
-			font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei"; 
-		}
-		.inner img{
-			margin-bottom: 40px;
-			max-width: 100%;
-		}
-		h1{
-			font-size: 5em;
-			color: #aaaaaa;
-			font-weight: 600;
-			padding-bottom: 40px;
-		}
-		h2{
-			font-size: 1.2em;
-		}
-		h3{
-			font-size: 1em;
-		}
-		h4{
-			font-size: .6em;
-		}
-		p{
-			font-size: .4em;
-			text-align: left;
-			margin: 33px 33px 33px 33px;
-		}
-		.outer{
-			background: #000 url(./images/CatsEyesNebula.jpg) no-repeat fixed;
+	<script type="text/javascript" charset="utf-8" src='./js/jquery.superslides.min.js'></script>
+	<script type="text/javascript" src='./js/jquery.animate-enhanced.min.js'></script>
+	<script src="./js/jquery.easing.1.3.js"></script>
+	<script src="./js/application.js"></script>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			display: table;
-			position: relative9;
-			overflow: hidden;
-			color: #aaaaaa;
-		}
-		.middle{
-			display: table-cell;
-			vertical-align: middle;
-			position: absolute9;
-			top: 50%\9;
-			text-align: center;
-		}
-		.inner{
+  ga('create', 'UA-41229738-3', 'lvn.ms');
+  ga('send', 'pageview');
 
-			padding: 10px 0;
-			border-bottom: 1px solid #cccccc;
-			position: relative9;
-			top: -50%\9;
-			text-align: center;
-			font-size: 44px;
-			width:800px;
+</script>
+<style>
+/* overall*/
+body{
 
-			}
+}
 
-		.contact{
-			margin:0 auto;
-			width: 260px;
-			text-align: center;
-		}
-		/* screen#1 */
-		div#cover{
-			text-align: center;
-			vertical-align: middle;
-		}
-		h1#song_title_eng{
-			margin-top: 10%;
-		}
-		h1#song_title_chn{
-			
-		}
+.screen{
+	width:auto;
+	height: 100%;
+	overflow: hidden;
+}
 
-		/*qq mail*/
-		.mailInput{
-			margin-top: 40px;
-			text-align: center;
-		}
-		input[type="email"],input[type="email"]:hover {
-			border-top-style: none;
-			border-left-style: none;
-			border-right-style: none;
-			border-bottom-style: 1px solid;
-			border-bottom-color: #bbb;
-			color:#2bb32e;
-			font-size: 18px;
-			outline:none;
-			resize:none;
-			width: 100%;
-			display: block;
-			text-align: center;
+.slides-pagination{
+	display:none;
+}
 
-		}
-		.btn{
-			padding:10px 0;
-			width: 100%;
-			margin: 20px 0 0; 
-			font-size: 20px;
-			display: block;
-			border-style: none;
-			background-color: #aaaaaa;
-			color: white;
-		}
+.song_title_screen1 h1{
+	text-shadow: 1px 1px 1px #000;
+	color:#fff;
+}
 
-		.btn:hover{
-			background-color: #2BB32E;
-			color: white;
-		}
+.song_title_screen2 h1{
+	text-shadow: 1px 1px 1px #666;
+	color:#000;
+}
 
-		.img{
-			width: 258px;
-			height: 258px;
-			background-image: url("images/lvnms258.jpg");
-		}
+#screen3 h1{
+	color:#e0d359;
+}
 
-		#copyright{
+/* copyright */
+
+#copyright{
 			color:#666;
 			position:fixed;
 			right:66px;
@@ -136,6 +63,10 @@
 			height:27px;
 
 		}
+		#chance{
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent), to(rgba(255, 255, 255, 0.5)));
+}
+
 		#lvn{
 			display:block;
 			float:left;
@@ -149,181 +80,176 @@
 			margin-bottom:7px;
 			opacity:.66;
 		}
-		/*for smart phones*/
-		@media screen and (max-device-width: 640px), screen and (max-device-width: 800px){
-			.contact{
-			margin:0 auto;
-			width: 640px;
+
+/*screen 1*/
+#screen1{
+	background: #000 url('./images/CatsEyesNebula.jpg') no-repeat fixed;
+	background-size:1280px 800px;
+}
+
+.song_title_screen1{
+	overflow: visible;
+	color:#fff;
+	font-family: 'ExoThin';
+	font-size: 1em;
+	position: absolute;
+	top: 66%;
+	left: 11%;
+	z-index: 999;
+	-webkit-transition:
+}
+
+/*screen 2*/
+		#screen2{
+			background:#c2c2c2;
+			-webkit-transition:background .3s ease-in;
+		}
+
+		.song_title_screen2{
+	overflow: visible;
+	color:#000;
+	font-family: 'ExoThin';
+	font-size: 1em;
+	position: absolute;
+	top: 66%;
+	left: 11%;
+	z-index: 999;
+	-webkit-transition:
+}
+		
+		.sc-player{
+			vertical-align: middle;
+			top: 50%;
+			left: 50%;
 			text-align: center;
-			}
-
-			.img{
-				width: 640px;
-				height: 640px;
-				background-image: url("images/lvnms640.gif");
-			}
-
-			.inner p{
-				font-size: 40px;
-			}
-
-			input{
-				font-size: 30px;
-			}
-
-			.contact p{
-				font-size: 28px;
-			}
-
-			#copyright{
-				display: none;
-			}
-
-			p.cellphone{
-				display:block; 
-				padding-top: 20px;
-			}
-
+		}
+		.sc-player .sc-play{
+			background-image: url('./images/play.png');
+			background-size: 256px 256px;
+			-webkit-transition:background-image .2s ease-in;
 		}
 
-		@media screen and (max-height: 710px){
-			#copyright{
-				display: none;
-			}
+		.playing{
+			height:100%;
+			width:100%;
+			background:#e0d359;	
+			overflow: visible;
+			-webkit-transition: background .3s ease-in;
 		}
-		/* SC-Player*/
-		#pause{
+		.playing .sc-play{
+			background-image: url('./images/pause.png');
+			background-size: 256px 256px;
+			-webkit-transition:background-image .2s ease-in;
+		}
+
+		.sc-play{
+			margin-top:15%;
+			margin-left:14%;
+			display: block;
+			height: 256px;
+			position: absolute;
+			width: 256px;
+		}
+
+		.preserve{
+			width: 256px;
+			height: 256px;
+		}
+
+		#pause, li.active, .sc-waveform-container,.sc-info, .sc-pause, .hidden, a#info, .sc-info-toggle {
 			display: none;
 		}
 		@font-face{
 			font-family: 'Exo';
 			src:url(./fonts/Exo.ttf);
 		}
-		li.active{
-			display: none;
+		.sc-time-indicators{
+			float: left;
+			margin: 6% 0 0 11%;
+			font-family: 'Exo';
+			font-size: 4em;
+			text-shadow: 1px 1px 1px #666;
 		}
-		.sc-info h3{
-			font-family: 'ExoThin', Helvetica Neue;
-		}
-		.sc-info h3 a:link, .sc-info h3 a:visited{
-			color:#fff;
-		}
-		.sc-info h3 a:hover{
 
-		}
-		.sc-info h3 a:active{
-
-		}
-		/* sliding */
-		#slide_controller{
-			z-index: 100;
+		/* lyric*/
+		#lyric{
 			position: fixed;
+			color: #c2c2c2;
+			float:right;
+			margin: 6% 6% 0 0;
+			left:66%;
+			font-size: 2em;
 		}
-		div.sc-player{
-			height:100%;
-	//		margin-top: 100%;
-		}
-		div#lyric{
-			//margin-top:200%;
-			font-family:"Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei"; 
-		}
-		#down_arrow{
-			height:99px;
-			width:99px;
-		}
-		.middle { position: relative; overflow: auto; }
-    .middle li { list-style: none; }
-        .middle ul li { float: left; }
 
+/*screen 3*/
 
-	</style>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+</style>
+<script type="text/javascript">
 
-  ga('create', 'UA-41229738-3', 'lvn.ms');
-  ga('send', 'pageview');
 
 </script>
 </head>
 <body>
 <wrapper>
-<div class="outer">
-	<div class="middle">
-		<div id="slide_controller">
-				<a href="#" class="unslider-arrow prev">Previous slide</a>
-				<a href="#" class="unslider-arrow next">Next slide</a>
-				<script>
-    var unslider = $('.banner').unslider();
-    
-    $('.unslider-arrow').click(function() {
-        var fn = this.className.split(' ')[1];
-        
-        //  Either do unslider.data('unslider').next() or .prev() depending on the className
-        unslider.data('unslider')[fn]();
-    });
-</script>
-		</div>
-	<ul>
-	<li>
-		<div id="cover">
-			<h1 id="song_title_eng">Family Album Tritium-Star</h1>
+
+	<script type="text/javascript">
+$('#slides').superslides({
+play: false, // Milliseconds for delay
+slide_speed: 'fast',
+slide_easing: 'linear',
+pagination: true,
+hashchange: false,
+scrollable: false,
+	});
+	</script>
+<nav class="slides-navigation">
+	<a href="#" class="next"><img src='./images/right.png'></a>
+	<a href="#" class="prev"><img src='./images/left.png'></a>
+</nav>
+<div id="slides" style="position: relative; overflow-x: hidden; width: 100%; height: 392px;">
+<ul class="slides-container">
+<li>
+	<div id="screen1" class="screen">
+			<div class="song_title_screen1">
+		<h1 id="song_title_eng">Family Album Tritium-Star</h1>
 			<h1 id="song_title_chn">走遍氚星</h1>
-			<a class="unslider-arrow next" href="#"><img id="down_arrow" src="./images/down.png" /></a>
-			<script type="text/javascript">
-				$(function() {
-    				$('.middle').unslider({	
-    				speed: 1000,               //  The speed to animate each slide (in milliseconds)
-					delay: 1000,              //  The delay between slide animations (in milliseconds)
-					complete: function() {},  //  A function that gets called after every slide animation
-					keys: true,               //  Enable keyboard (left, right) arrow shortcuts
-					dots: true,               //  Display dot navigation
-					fluid: false              //  Support responsive design. May break non-responsive designs);
-				});    				
-});
-			</script>
-		</div>	
-	</li>
-		<li>
-		<div class="inner">
-			<a href="https://soundcloud.com/lvnms/family-album-tritium-star" class="sc-player">走遍氚星</a>
+		</div>
+		<img src='./images/CatsEyesNebula.jpg' />
+	</div>
+</li>
+<li>
+	<div id="screen2" class="screen">
+		<a href="https://soundcloud.com/lvnms/family-album-tritium-star" class="sc-player">走遍氚星</a>
 	<script type="text/javascript" src="./js/soundcloud.player.api.js"></script>
 	<script type="text/javascript" src="./js/sc-player.js"></script>
+	<script type="text/javascript">
+		
+	</script>
+		<div class="song_title_screen2">
+		<h1 id="song_title_eng_screen2">Family Album Tritium-Star</h1>
+			<h1 id="song_title_chn_screen2">走遍氚星</h1>
 		</div>
-	</li>
-	<li>
 		<div id="lyric">
 			<p>完全的自主</p>
-				<p>我拥有完全的自由</p>
-				<p>我的思想和灵魂</p>
-				<p>都由我自己掌控</p>
-
-				<p>我刚刚出生</p>
-				<p>在昨天之前的发生</p>
-				<p>我完全都不知道</p>
-				<p>统统都不知道</p>
-
-				<p>带着友好的讯息，带着善意</p>
-				<p>我相信我可以走遍氚星</p>
-<a href="#" class="unslider-arrow prev">Previous slide</a>
-				<p>全都靠自己</p>
-				<p>谁想要幸福的生活</p>
-				<p>那全都靠你自己</p>
-
-				<p>随时准备打开电视，随时准备感动</p>
-				<p>只要能相信自己</p>
-				<p>我也能走遍氚星，走遍全宇宙</p>
-
-				<p>《美丽新世界》</p>
-				<p>《一九八四》</p>
-				<p>《动物庄园》</p>
-				<p>《娱乐至死》</p>
-				<p>《引爆点》</p>
-				<p>《乌合之众》</p>
-				<p>《走遍氚星》</p>
-			</p>
+			<p>我擁有完全的自由</p>
+		</div>
+	</div>
+</li>
+<li>
+	<div id="screen3" class="screen">
+		<h1>Special Thanks</h1>
+		<h2>Without your great helps, we won't go any further.</h2>
+		<p>跳爷：谢谢你美妙的歌声</p>
+		<p>是果：谢谢你对我的信任和溢美之词，也谢谢你辛苦的工作</p>
+		<p>核桃：如果不是你搭了代码架子，我没法在你的基础上折腾</p>
+		<p>克炎：没有你的大作，就没有《走遍氚星》这首歌。</p>
+		<p>门门：拜谢赐字！</p>
+		<p>zilu：期待你在节目里介绍爱和音乐~</p>
+		<p>兔子爷&初爷：拜谢承揽爱和客服工作m(_ _)m</p>
+		<p>所有知友&知乎海盗：大恩不言谢。</p>
+		<p>所有人：感谢大家关注爱和音乐，接下来我们会每月发布一首新歌。</p>
+		<p>L: I love you.</p>
+		<p></p>
 	</div>
 </li>
 </ul>
