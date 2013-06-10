@@ -8,6 +8,11 @@ html, body{
 	min-height: 100%;
 
 }
+a, a:link, a:visited{
+	color: #e0d359;
+
+} 
+
 h1,h2{
     line-height:1;
     margin:1.4em 0 0.8em;
@@ -103,11 +108,6 @@ p{
 		height: 100%;
 	}
 
-	#song{
-		background:#c2c2c2;
-		-webkit-transition:background .3s ease-in;
-	}
-
 	.songTitle{
 	overflow: visible;
 	color:#000;
@@ -117,7 +117,6 @@ p{
 	bottom: 10%;
 	left: 6%;
 	z-index: 999;
-	-webkit-transition:
 	}
 		
 
@@ -129,9 +128,21 @@ p{
 			left:66%;
 			font-size: 2em;
 		}
+/* screen 3 */
 
-/*screen 3*/
+#signup{
+	width:100%;
+	height:100%;
+}
+
+/*screen 4*/
 #thanks .container{
+	background: #e0d359;
+	font-family: 'ExoThin';
+	font-size: ;
+	color: #e0d359;
+	text-shadow: 1px 1px 1px #000;
+	overflow: visible;
 	padding: 3% 6%;
 }
 
@@ -141,14 +152,17 @@ p{
 			/*margin: 0 auto;*/
 			width: 100%;
 			height: 100%;
+			background:#c2c2c2;
+			-webkit-transition: all .3s ease-in;
 			/*vertical-align: middle;*/
 			/*text-align: center;*/
 		}
 		.sc-player .sc-play{
 			z-index: 800;
-			background-image: url(../../images/play.png);
+			background: url(../../images/play.png);
 			background-size: 256px 256px;
 			-webkit-transition:background-image .2s ease-in;
+			-webkit-transition:background-color .3s ease-in;
 		}
 
 		.playing{
@@ -200,7 +214,7 @@ p{
 
 #copyright{
 			z-index: 800;
-			color:#666;
+			color:#000;
 			position:fixed;
 			right:66px;
 			bottom:30px;
