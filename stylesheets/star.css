@@ -282,11 +282,84 @@ p{
 
 /* signup*/
 
-#signup_iframe{
-	width:100%;
+#signup_screen{
+	width: 100%
 	height:100%;
-	overflow: hidden;
 }
+
+#signup_screen .container{
+	background: #e0d359 url(../images/info_bg.png);
+}
+
+#form{
+		background: rgba(0,0,0,0);
+		overflow: visible;
+		width:100%;
+		padding: 6%;
+	}
+	#signup_form{
+		color: #e0d359;
+		margin: 0 6% 0 6%;
+		font-size: 5em;
+		font-family: 'ExoBold';
+		text-shadow: 1px 5px 10px #000;
+		overflow: visible;
+	}
+	#signup_form p{
+		 margin: 3% 3% 0 3%;
+		 word-wrap:break-all;
+		 text-align: center;
+	}
+		/* inputs */
+	#inputs{
+		margin: 6% 0 0 3%;
+	}
+	input[type="email"],input[type="email"]:hover {
+			background-color: #e0d359;
+			border-top-style: none;
+			border-left-style: none;
+			border-right-style: none;
+			border-bottom-style: 2px solid;
+			border-bottom-color: #000;
+			border-radius: 10px;
+			color:#000;
+			float: left;
+			font-family: 'ExoThin';
+			font-size: 1em;
+			outline:none;
+			resize:none;
+			width: 33%;
+			display: block;
+			text-align: left;
+		}
+	#submit{
+			float:right;
+			font-family: 'ExoThin';
+			font-size: .6em;
+	}
+	.btn{
+			padding:10px 0;
+			width: 23%;
+			height: 111px;
+			margin: 0 5% 0 0; 
+			font-size: 20px;
+			display: block;
+			border-style: none;
+			background-color: rgba(216,206,45,0);
+			color: #000;
+			border-radius: 12px;
+			vertical-align: middle;
+			text-align: center;
+			-webkit-transition: color .1s ease-in;
+			-webkit-transition: all .1s ease-in;
+		}
+
+		.btn:hover{
+			background-color: #e0d359;
+			color: #e0d359;
+			text-shadow: 1px 1px 1px #000;
+			-webkit-transition: all .1s ease-in;
+		}
 
 /* copyright
 
