@@ -86,14 +86,19 @@ p{
 /*screen 1*/
 #welcome h1{
 	overflow: visible;
-	color:#fff;
+	color:#646464;
 	font-family: 'ExoThin';
 	font-size: 2em;
 	position: absolute;
 	top: 66%;
 	left: 11%;
 	z-index: 999;
-	-webkit-transition:
+	-webkit-transition: all .2s ease-in;
+}
+
+#welcome h1:hover{
+	color: #898989;
+	-webkit-transition: all .2s ease-in;
 }
 
 #welcome h1 span, #song h1 span{
@@ -361,6 +366,16 @@ p{
 			-webkit-transition: all .1s ease-in;
 		}
 
+/* temp signup*/
+#temp_signup{
+	padding: 6%;
+	color: #898989;
+	background: #e0d359 url(../images/info_bg.png);
+	text-shadow: 1px 1px 1px #000;
+	font-size: 2em;
+
+}
+
 /* copyright
 
 #copyright{
@@ -408,8 +423,8 @@ p{
 		}
 
 #copyright_content{
-	opacity: 0;
-	font-size: 1em;
+	opacity: .2;
+	font-size: .8em;
 	color: #e0d359;
 	background: rgba(0, 0, 0, .0);
 	-webkit-transition: all 1s ease-in;
