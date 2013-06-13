@@ -43,7 +43,8 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
   ga('send', 'pageview');
 
 </script>
-
+	<!-- soundcloud player ＆ touch swipe-->
+	<script type="text/javascript" src='.js/jquery.touchwipe.min.js'></script>
 <script type="text/javascript">
 	$(document).keydown(function(event){
 			if(event.which == 32){
@@ -54,7 +55,19 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 				}
 			}
 	});
+
+	$(document).ready(function() {
+			 $("li").touchwipe({
+		     wipeLeft: function() { $('a.next').click(); },
+		     wipeRight: function() { $('a.prev').click();},
+		     min_move_x: 20,
+		     min_move_y: 20,
+		     preventDefaultEvents: true
+			 });
+	});
 </script>
+
+	
 </head>
 <body>
 
@@ -68,8 +81,9 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 		<li id="welcome">
 			<img src='./images/CatsEyesNebula.jpg'/>
 			<div class="container">
+				<div id="nebula"></div>
 				<h1>Family Album Tritium-Star<span>走遍氚星</span></h1>
-			</div>
+		</div>
 		</li>
 		<!-- slide 02 -->
 		<li id="song">
