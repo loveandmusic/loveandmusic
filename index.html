@@ -46,6 +46,10 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 	<!-- soundcloud player ＆ touch swipe-->
 	<script type="text/javascript" src="js/jquery.touchwipe.min.js"></script>
 <script type="text/javascript">
+	
+
+	var lyrics = "走遍氚星.lrc"//歌词地址
+
 	$(document).keydown(function(event){
 			if(event.which == 32){
 				if($('#player').hasClass('playing')){
@@ -66,7 +70,7 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 			 });
 	});
 </script>
-
+<script scr="js/sc-lryics.js"></script>
 	
 </head>
 <body>
@@ -89,6 +93,7 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 		<li id="song">
 			<div class="container">
 				<a href="https://soundcloud.com/lvnms/family-album-tritium-star" class="sc-player" id="player">走遍氚星</a>
+				<div id="lrcBox"></div>
 				<div class="songTitle">
 					<h1>Family Album Tritium-Star<span>走遍氚星</span></h1>
 				</div>

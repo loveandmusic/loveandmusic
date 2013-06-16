@@ -152,12 +152,16 @@ p{
 
 
 	/* lyric*/
-		#lyric{
-			color: #c2c2c2;
-			margin: 6% 6% 0 0;
-			left:66%;
-			font-size: 2em;
-		}
+		#lrcBox{
+			margin: 0 auto;
+			position: absolute;
+			bottom: 30%;
+			width: 400px;
+			height: 100px;
+			background-color: yellow;
+			z-index: 1200;
+			
+			}
 /* song info */
 .download_track{
 	margin: 23% auto 0 auto;
