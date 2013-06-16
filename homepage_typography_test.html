@@ -19,6 +19,8 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 	<link rel='stylesheet' href='./fonts/exo/stylesheet.css' />
 	<link rel='stylesheet' href='./stylesheets/superslides.css' />
 	<link rel="stylesheet" href="./stylesheets/star.css">
+	<!-- typography -->
+	<link rel="stylesheet" href="./stylesheets/typography.css">
 	<!-- no signup iframe, no the css below. 
 	<link rel="stylesheet" href="./stylesheets/signup.css"> -->
 	<!-- imported js -->
@@ -28,8 +30,10 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 	<script src="./js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="./js/soundcloud.player.api.js"></script>
 	<script type="text/javascript" src="./js/sc-player.js"></script>
+	<script type="text/javascript" src="js/jquery.lettering.js"></script>
 	<!-- custom js for superslides.js -->
 	<script src="./js/application.js"></script>
+
    
 	<!-- google analytics    -->
   <script>
@@ -42,7 +46,8 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
   ga('send', 'pageview');
 
 </script>
-
+	<!-- soundcloud player ＆ touch swipe-->
+	<script type="text/javascript" src="js/jquery.touchwipe.min.js"></script>
 <script type="text/javascript">
 	$(document).keydown(function(event){
 			if(event.which == 32){
@@ -53,10 +58,21 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 				}
 			}
 	});
-</script>
 
+	$(document).ready(function() {
+			 $("li").touchwipe({
+		     wipeLeft: function() { $('a.next').click(); },
+		     wipeRight: function() { $('a.prev').click();},
+		     min_move_x: 20,
+		     min_move_y: 20,
+		     preventDefaultEvents: true
+			 });
+	});
+</script>
+	
 </head>
 <body>
+
 <nav class="slides-navigation">
 	<a href="#" class="next"><img src='./images/right.png'></a>
 	<a href="#" class="prev"><img src='./images/left.png'></a>
@@ -66,9 +82,15 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 		<!-- slide 01 -->
 		<li id="welcome">
 			<img src='./images/CatsEyesNebula.jpg'/>
-			<div "container">
-				<h1>Family Album Tritium-Star<span>走遍氚星</span></h1>
-			</div>
+			<div class="container letter-container">
+				<div id="nebula"></div>
+				<h1><a href="#">Family Album Tritium-Star<span>走遍氚星</span></a></h1>
+		</div>
+		<script type="text/javascript">
+				$(function() {
+					$(".letter-container h1 a").lettering();
+				});
+			</script>
 		</li>
 		<!-- slide 02 -->
 		<li id="song">
@@ -84,13 +106,16 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 			<div class="container">
 				<div class="left_column">
 					<div class="download_track">
-						<p><a href="http://sounddrain.com/?action=save&name=family-album-tritium-star&stream_url=nYx2oS60Hz37?stream_token=3wBkL"><img src='./images/download.png'></a><span>下载《走遍氚星》</span></p>
+						<p>下载《走遍氚星》</p>
+						<div>
+						<a href="http://sounddrain.com/?action=save&name=family-album-tritium-star&stream_url=nYx2oS60Hz37?stream_token=3wBkL"></a>
+						</div>
 					</div>
 				</div>
 				<div class="right_column">
 					<h1>关于《走遍氚星》</h1>
 					<h3>——自由意志、学外语与「我们究竟该怎么办」</h3>
-					<p><a href="http://www.zhihu.com/people/keyan">张克炎</a>的小说《<a href="http://www.zhihu.com/question/20908959/answer/16573375">礼物</a>》是 songwriter <a href="http://www.zhihu.com/daguo">大果</a>写这首歌的灵感来源。他认为，小说中写到的这对父子，与我们每个人的生存状态都很相像。我们的命运是由谁决定的？只有最乐观最坚强的人才会说「全都靠自己。谁想要幸福的生活，那全都靠你自己」。而「只要能相信自己，我也能走遍氚星，走遍全宇宙」听上去究竟更像讽刺，还是更像励志，完全取决于你的心态。</p>
+					<p><a href="http://www.zhihu.com/people/keyan">张克炎</a>的小说<a href="http://www.zhihu.com/question/20908959/answer/16573375">《礼物》</a>是 songwriter <a href="http://www.zhihu.com/daguo">大果</a>写这首歌的灵感来源。他认为，小说中写到的这对父子，与我们每个人的生存状态都很相像。我们的命运是由谁决定的？只有最乐观最坚强的人才会说「全都靠自己。谁想要幸福的生活，那全都靠你自己」。而「只要能相信自己，我也能走遍氚星，走遍全宇宙」听上去究竟更像讽刺，还是更像励志，完全取决于你的心态。</p>
 
 					<p>在并不知命运会如何发展的时候，我们只能像文中的父子那样，去做我们认为最值得、最稳妥、最有可能保住我们存在的选择。氚星在哪里？氚星语是什么？谁也不知道，我们也不关心。我们只是想继续地存活下去。</p>
 					<p>从小说作者那里取得改编授权之后，大果花了三天时间用比较简陋的设备制作了这首作品的 demo，并将它作为爱和音乐试发布的第一首歌曲。</p>
@@ -102,16 +127,17 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 		<!-- slide 04 -->
 		<li id="about">
 			<div class="container">
-			<div class="left_column">
+					<div id="about_loveandmusic">
 					<h1>关于爱和音乐</h1>
 					<p>爱和音乐是一个面向独立音乐人的自主发行平台，这么说也许对你——我亲爱的听众——毫无帮助，因为你既不关心音乐人到底要如何生存，也不关心音乐产业是否能健康发展、分成比例是否合理。你关心的只是在哪里能听到自己喜欢听的歌，并下载它们</p>
 					<p style="text-align:center;">——就在这里。</p>
 					<p>爱和音乐集结了一帮热爱音乐、热爱创作音乐并掌握相当程度创作技巧的年轻人。他们信奉并践行「Do the things you love, and love the things you do」，持续生产着目前尚不为人知的优秀作品。</p>
 					<p>爱和音乐将每月进行一次作品发布，其中部分歌曲可能需要向创作者付费才可下载，价格完全由创作者决定，并且没有任何人、任何中间环节抽成。爱和音乐并非作为一个付费下载平台而存在，而是更像一个线上音乐的跳蚤市场。也就是说，你将直接从创作者手中买到他的作品。</p>
-				</div>
+					</div>
 			</div>
 		</li>
-		<!-- slide 04 		<li id="thanks">
+		<!-- slide 05 -->
+	<!-- 	<li id="thanks">
 			<div class="container">
 				<h2>Special Thanks</h2>
 				<h1>Without your great helps, we're not going any further.</h1>
@@ -128,42 +154,26 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 				<p>L: I love you.</p>
 			</div>
 		</li> -->
-		<!-- slide 05 backup -->
-		<li id="signup_screen">
-			<div class="container">
-			<div id="form">
-	<form id="signup_form" style="border:0px solid #ccc;padding:3px;text-align:left;" action="https://tinyletter.com/loveandmusic" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/loveandmusic', 'popupwindow', 'scrollbars=no,width=800,height=600');return true">
-		<p><label for="tlemail">订阅每月发布邮件。</label></p>
-		<div id="inputs">
-			<input type="email" style="width:66%" name="email" id="tlemail" placeholder="在這裏輸入郵箱" x-webkit-speech autofocus />
-			<input type="hidden" value="1" name="embed"/><input type="submit" value="Okay" id="submit" class="btn" />
-		</div>
-	</form>
-</div>
-			</div>
-		</li>
-		<!-- slide 05 
+
+		<!-- slide 06 for signup-->
 		<li id='temp_signup'>
 			<div class="container">
+				<div id="temp_signup_wrapper">
 				<h2>做一名幸福的被动歌迷，你只需要</h2>
-				<h1><a href="http://tinyletter.com/loveandmusic">订阅</a>每月发布邮件。</h1>
-				<p>你将会定期收到从未听过的、被用心创作出来的、好听的，华语流行音乐。</p>
+				<h1 id="force3em"><a href="http://tinyletter.com/loveandmusic">订阅</a>爱和音乐每月发布邮件。</h1>
+				<p>你将定时收到从未听过的、好听的华语流行音乐。邮件内容包括歌曲封面、歌词、相关信息、试听及下载/购买<sup>*</sup>链接。</p>
+				<section class="note">*歌曲由创作者自行定价</section>
+				</div>
 			</div>
 		</li> -->
 		<!-- end of li -->
 	</ul>
 	<!-- end of ul -->
 </div>
-<!-- end of #slides -->
-<!-- copyright
+
 <div id="copyright">
-    	<span>
-    		<span style="display:block;float:left;width:60px;padding-top:3px;">© 2013 </span><img id="lvn" src="images/loveandmusic18px.png" /><span style="display:block;float:left;width:12px;padding-top:3px;"> - </span><img id="chance" src="images/givechance18px.png" />
-    	</span>
- </div>  -->
-<div id="copyright">
-	<span id="copyright_content">© 2013 爱和音乐 - 制造好听的华语流行音乐 <a href="http://zhihu.com/daguo">知乎</a> | <a href="http://weibo.com/aiheyinyue?topnav=1&wvr=5&topsug=1">微博</a> | <a href="http://site.douban.com/206896/">豆瓣小站</a></span>
-	</script>
+	<span id="copyright_content">© 2013 爱和音乐 | 你爱的音乐商店。 <a href="http://zhihu.com/daguo">知乎</a> | <a href="http://weibo.com/aiheyinyue?topnav=1&wvr=5&topsug=1">微博</a> | <a href="mailto:i@lvn.ms">邮件</a></span>
 </div>
+
 </body>
 
