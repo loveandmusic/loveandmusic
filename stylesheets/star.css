@@ -131,6 +131,9 @@ p{
 	display: inline-block;
 	padding-top: 0.5em;
 }
+span.return{
+	display: block;
+}
 
 /*screen 2*/
 	.container{
