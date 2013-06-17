@@ -4,6 +4,7 @@
 }
 
 html, body{
+  background: #000;
   width: 100%;
   min-height: 100%;
 
@@ -309,18 +310,49 @@ h4{
  }
 }
 
+/* now playing*/
+
+#now_playing{
+  color: rgba(255,255,255, .6);
+  font-family: 'Palatino';
+  font-size: 32px;
+  height:40px;
+  width: 60%;
+  margin: 5% 20% 0 20%;
+  text-align: left;
+  -webkit-transition: all .3s ease-in;
+}
+#now_playing_info{
+  display: inline-block;
+  height:40px;
+  width:40px;
+  background: url(../images/info.png) no-repeat;
+  float: right;
+  opacity: .6;
+  -webkit-transition: all .3s ease-in;
+}
+#now_playing_info:hover{
+  opacity: .9;
+  -webkit-transition: all .3s ease-in;
+}
+
 /* function buttons*/
 nav#functions{
   height:40px;
   width: 60%;
-  margin: 16% 20% 0 20%;
+  margin: 8% 20% 0 20%;
   text-align: justify;
 }
 nav#functions div{
+  opacity: .6;
   display: inline-block;
   height:40px;
   width:40px;
-
+  -webkit-transition: all .3s ease-in;
+}
+nav#functions div:hover{
+  opacity: .9;
+  -webkit-transition: all .3s ease-in;
 }
 #random_button{
   background: url(../images/random.png) no-repeat;
@@ -347,7 +379,7 @@ nav#functions div{
 
 #info .container{
   background: #rgba(0,0,0,0);
-  background-image:  url(../images/pianoweekly_bg2.jpg);
+//  background-image:  url(../images/pianoweekly_bg2.jpg);
   background-repeat: no-repeat;
   background-size: 110% 1280px;
   background-position: -50px -100px;
