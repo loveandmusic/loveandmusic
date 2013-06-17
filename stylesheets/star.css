@@ -131,6 +131,9 @@ p{
 	display: inline-block;
 	padding-top: 0.5em;
 }
+span.return{
+	display: block;
+}
 
 /*screen 2*/
 	.container{
@@ -308,7 +311,8 @@ input[type="email"],input[type="email"]:hover {
 	margin: 0 auto;
 	width: 100%;
 	height: 100%;
-	background-image:url(../images/star_playing_bg1.jpg),url(../images/star_playing_bg3.png);
+	background: #c2c2c2;
+	//background-image:url(../images/star_playing_bg2.jpg),url(../images/star_playing_bg3.png);
 	-webkit-transition: all .3s ease-in;
 	vertical-align: middle;
 	text-align: center;
@@ -325,7 +329,7 @@ input[type="email"],input[type="email"]:hover {
 .playing{
 	height:100%;
 	width:100%;
-//	background:#e0d359;	
+	background:#e0d359;	
 	overflow: visible;
 	-webkit-transition: background .3s ease-in;
 }
