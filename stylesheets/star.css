@@ -513,7 +513,7 @@ li.active, .sc-waveform-container,.sc-info,  .hidden, a#info, .sc-info-toggle {
 
 /*preloadImages*/
 
-#preloadImages {
+.preloadImages {
 	width: 0px;
 	height: 0px;
 	display: none;
