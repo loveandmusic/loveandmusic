@@ -134,6 +134,7 @@ li{
 #welcome h1 span, #song h1 span{
 	display: block;
 	padding-top: 0.5em;
+	text-align: center;
 }
 span.return{
 	display: block;
