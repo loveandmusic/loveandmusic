@@ -241,15 +241,14 @@ span.return{
 }
 
 #about .container{
-	margin: 6% 0 0 6%;
-	width: 40%;
+	width: 100%;
+	height: 100%;
 	text-align: left;
 	font-family: 'ExoThin';
 	font-size: 18px;
 	font-weight: 100;
 	line-height: 1.5em;
 	color: #d2d2d2;
-	height: 100%;
 	text-stroke: 1px rgba(0,0,0,0);
 	text-fill-color:transparent;
 	text-shadow: 0px 0px 6px #198964;
@@ -262,6 +261,18 @@ span.return{
 }
 
 
+#about_loveandmusic{
+	float: left;
+	width: 30%;
+	margin-left: 6%;
+	margin-top: 4%;
+}
+
+#contact_us{
+	float: right;
+	margin-right: 12%;
+	margin-top: 20%;
+}
 /* signup*/
 
 #signup_screen{
