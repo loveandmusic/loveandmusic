@@ -29,6 +29,10 @@ p{
 }
 /*superslides basics*/
 
+li{
+	list-style-type: none;
+}
+
 #slides {
   position: relative;
 }
@@ -140,6 +144,10 @@ span.return{
 		width: 100%;
 		height: 100%;
 	}
+	
+	#song .container{
+		background-color: #e0d359;	
+	}
 
 	.songTitle{
 	overflow: visible;
@@ -156,15 +164,10 @@ span.return{
 
 	/* lyric*/
 		#lrcBox{
-			margin: 0 auto;
-			position: absolute;
-			bottom: 30%;
-			width: 400px;
-			height: 100px;
-			background-color: yellow;
-			z-index: 1200;
-			
+			width: 100%;
+			text-align: center;		
 			}
+
 /* song info */
 .download_track{
 	margin: 23% auto 0 auto;
@@ -311,33 +314,36 @@ input[type="email"],input[type="email"]:hover {
 	margin: 0 auto;
 	width: 100%;
 	height: 100%;
-	background: #c2c2c2;
+	/*background: #c2c2c2;*/
 	//background-image:url(../images/star_playing_bg2.jpg),url(../images/star_playing_bg3.png);
-	-webkit-transition: all .3s ease-in;
+	-webkit-transition: all 3s ease-in;
 	vertical-align: middle;
 	text-align: center;
 	color: #000;
+	background-color: transparent;
 }
 .sc-player .sc-play{
 	z-index: 800;
 	background: url(../images/play.png);
 	background-size: 256px 256px;
-	-webkit-transition:background-image .2s ease-in;
-	-webkit-transition:background-color .3s ease-in;
+	-webkit-transition:background-image 2s ease-in;
+	-webkit-transition:background-color 2s ease-in;
 }
 
 .playing{
 	height:100%;
 	width:100%;
-	background:#e0d359;	
+	/*background:#e0d359;	*/
 	overflow: visible;
-	-webkit-transition: background .3s ease-in;
+	background-color: transparent;
+
 }
+
 .playing .sc-play{
 	z-index: 800;
 	background-image: url(../images/pause.png);
 	background-size: 256px 256px;
-	-webkit-transition:background-image .2s ease-in;
+	-webkit-transition:background-image 2s ease-in-out;
 }
 
 .sc-play{
@@ -363,11 +369,8 @@ li.active, .sc-waveform-container,.sc-info,  .hidden, a#info, .sc-info-toggle {
 	src:url(./fonts/Exo.ttf);
 }
 .sc-time-indicators{
-	font-family: 'Exo';
-	font-size: 1em;
-	text-shadow: 1px 1px 1px #666;
 	position: absolute;
-	display: none;
+	visibility: hidden;
 }
 
 /* temp signup*/
@@ -418,3 +421,119 @@ li.active, .sc-waveform-container,.sc-info,  .hidden, a#info, .sc-info-toggle {
 	text-shadow: 1px 1px 1px #000;
 	-webkit-transition: all .7s ease-in;
 }
+/*bg-slide*/
+
+.bg-slide,
+.bg-slide:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+.bg-slide li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+	/*-webkit-backface-visibility: hidden;*/
+    -webkit-animation: imageAnimation 60s linear infinite 0s;
+    -moz-animation: imageAnimation 60s linear infinite 0s;
+    -o-animation: imageAnimation 60s linear infinite 0s;
+    -ms-animation: imageAnimation 60s linear infinite 0s;
+    animation: imageAnimation 60s linear infinite 0s; 
+}
+
+.bg-slide li:nth-child(1) span { 
+    background-image: url(../images/star/a.jpg) 
+}
+.bg-slide li:nth-child(2) span { 
+    background-image: url(../images/star/studio.jpg);
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s; 
+}
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -webkit-animation-timing-function: ease-in; }
+    4% { opacity: 1;
+         -webkit-animation-timing-function: ease-out; }
+    45% { opacity: 1 }
+    50% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -moz-animation-timing-function: ease-in; }
+    4% { opacity: 1;
+         -moz-animation-timing-function: ease-out; }
+    45% { opacity: 1 }
+    50% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -o-animation-timing-function: ease-in; }
+    4% { opacity: 1;
+         -o-animation-timing-function: ease-out; }
+    45% { opacity: 1 }
+    50% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -ms-animation-timing-function: ease-in; }
+    4% { opacity: 1;
+         -ms-animation-timing-function: ease-out; }
+    45% { opacity: 1 }
+    50% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    4% { opacity: 1;
+         animation-timing-function: ease-out; }
+    45% { opacity: 1 }
+    50% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
