@@ -132,7 +132,7 @@ li{
 }
 
 #welcome h1 span, #song h1 span{
-	display: inline-block;
+	display: block;
 	padding-top: 0.5em;
 }
 span.return{
@@ -155,8 +155,8 @@ span.return{
 	font-family: 'ExoThin';
 	font-size: 1em;
 	position: absolute;
-	bottom: 10%;
-	left: 6%;
+	top: 66%;
+	left: 11%;
 	z-index: 999;
 	-webkit-transition: all .2s ease-in;
 	}
@@ -511,12 +511,23 @@ li.active, .sc-waveform-container,.sc-info,  .hidden, a#info, .sc-info-toggle {
 }
 
 
+/*preloadImages*/
+
+.preloadImages {
+	width: 0px;
+	height: 0px;
+	display: none;
+}
 
 
+.pre01{
+background-image: url(../images/star/a.jpg);
+}
 
+.pre02{
 
-
-
+background-image: url(../images/star/studio.jpg);
+}
 
 
 
