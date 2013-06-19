@@ -322,11 +322,12 @@ h4{
   text-align: left;
   -webkit-transition: all .3s ease-in;
 }
-#now_playing_info{
+
+#play_button{
   display: inline-block;
   height:40px;
   width:40px;
-  background: url(../images/info.png) no-repeat;
+  background: url(../images/play.png) no-repeat;
   float: right;
   opacity: .6;
   -webkit-transition: all .3s ease-in;
@@ -357,11 +358,11 @@ nav#functions div:hover{
 #random_button{
   background: url(../images/random.png) no-repeat;
   padding-left:3%;
-  padding-right: 17%;
+  padding-right: 16%;
 }
-#play_button{
-  background: url(../images/play.png) no-repeat;
-  padding-right: 17%;
+#info_button{
+  background: url(../images/info.png) no-repeat;
+  padding-right: 18%;
 }
 #testimonial_button{
   background: url(../images/testimonial.png) no-repeat;
