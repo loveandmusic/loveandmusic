@@ -517,12 +517,17 @@ li.active, .sc-waveform-container,.sc-info,  .hidden, a#info, .sc-info-toggle {
 	width: 0px;
 	height: 0px;
 	display: none;
-	background-image: url(../images/star/a.jpg);
-	background-image: url(../images/star/studio.jpg);
 }
 
 
+.pre01{
+background-image: url(../images/star/a.jpg);
+}
 
+.pre02{
+
+background-image: url(../images/star/studio.jpg);
+}
 
 
 
