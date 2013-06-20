@@ -11,6 +11,7 @@ html, body{
 a, a:link, a:visited{
 	color: #e0d359;
 	text-decoration: none;
+	outline:none;
 	text-shadow: 1px 1px 1px #000;
 	-webkit-transition: all .1s ease-in;
 } 

@@ -501,7 +501,7 @@
         // adding controls to the player
         $player
           .find('.sc-controls')
-            .append('<a href="#play" class="sc-play"></a> <a href="#pause" class="sc-pause hidden">Pause</a>')
+            .append('<a href="#play" class="sc-play" hidefocus="true"></a> <a href="#pause" class="sc-pause hidden" hidefocus="true">Pause</a>')
           .end()
           .append('<a href="#info" class="sc-info-toggle">Info</a>')
           .append('<div class="sc-scrubber"></div>')
