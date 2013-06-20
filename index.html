@@ -31,6 +31,8 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 	<script type="text/javascript" src="./js/sc-lyrics.js"></script>
 	<!-- custom js for superslides.js -->
 	<script src="./js/application.js"></script>
+	<!-- fullscreen -->
+	<script type="text/javascript" src="./js/fullscreen.js"></script>
 
 
    
@@ -78,10 +80,18 @@ o888o `Y8bod8P'     `8'     `Y8bod8P'      `bodP'`88.      o888o o888o o888o  `V
 					
 		});
 	});
+
+	$(document).ready(function() {
+		$('.to_fullscreen').click(function(){
+			$(document).toggleFullScreen();
+			$(this).toggleClass("is_fullscreen");
+		});
+
+	});
 </script>	
 </head>
 <body>
-
+<a href="#" class="to_fullscreen fullscreen"></a>
 <nav class="slides-navigation">
 	<a href="#" class="next"><img src='./images/right.png'></a>
 	<a href="#" class="prev"><img src='./images/left.png'></a>

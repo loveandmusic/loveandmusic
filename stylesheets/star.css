@@ -543,6 +543,25 @@ background-image: url(../images/star/studio.jpg);
 
 
 
+/*fullscreen*/
+
+.fullscreen{
+	display: block;
+	height: 28px;
+	width: 28px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2800;
+}
+.to_fullscreen{
+	background: url(../images/fullscreen.png) no-repeat;
+}
+.is_fullscreen{
+	background: url(../images/exit_fullscreen.png) no-repeat;
+}
+
+
 
 
 
